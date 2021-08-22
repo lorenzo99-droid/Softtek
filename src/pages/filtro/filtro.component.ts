@@ -13,7 +13,7 @@ export class  FiltroComponent implements OnInit {
   @Output() public mandandoDadosPraHome: EventEmitter<boolean> = new EventEmitter();
   booleana: boolean = false;
   formFiltros: FormGroup = new FormGroup({});
-  listaGenero = ['Escolher:', 'Masculino', 'Feminino', 'Não-binário'];
+  listaGenero = ['Escolher gênero:', 'Masculino', 'Feminino', 'Não-binário'];
   
   constructor(private fb: FormBuilder, private agendaService: AgendaService) { }
   
@@ -68,4 +68,6 @@ export class  FiltroComponent implements OnInit {
   {
     this.mandandoDadosPraHome.emit(true)
   }
+
+  // this.agendaService.postContatos(obj).subscr
 }
