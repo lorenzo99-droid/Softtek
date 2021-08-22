@@ -13,7 +13,7 @@ export class  FiltroComponent implements OnInit {
   @Output() public mandandoDadosPraHome: EventEmitter<boolean> = new EventEmitter();
   booleana: boolean = false;
   formFiltros: FormGroup = new FormGroup({});
-  listaGenero = ['Escolher gênero:', 'Masculino', 'Feminino', 'Não-binário'];
+  listaGenero = ['Masculino', 'Feminino', 'Não-binário'];
   
   constructor(private fb: FormBuilder, private agendaService: AgendaService) { }
   
@@ -50,24 +50,23 @@ export class  FiltroComponent implements OnInit {
       this.agendaService.atualizarGrid.next(true);
       this.limpar();
     });
-  }
-
+  };
+  
   limpar()
   {
     this.formFiltros.reset();
     this.formFiltros.controls['genero'].setValue('');
-  }
+  };
   varValoresForms()
   {
     console.log(this.formFiltros.controls['nome'].value);
     console.log(this.formFiltros.controls['idade'].value);
     console.log(this.formFiltros.controls['genero'].value);
-  }
+  };
 
   mandandoDadosParaHome()
   {
     this.mandandoDadosPraHome.emit(true)
-  }
+  };
 
-  // this.agendaService.postContatos(obj).subscr
 }
