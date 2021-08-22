@@ -1,0 +1,24 @@
+{
+    "contatos": 
+    [
+        
+        {
+            "id": 1,
+            "nome": "Vicente",
+            "idade": 20,
+            "genero": "Masculino"
+        },
+        {
+            "id": 2,
+            "nome": "Valentina",
+            "idade": 30,
+            "genero": "Feminino"
+        },
+        {
+            "id": 3,
+            "nome": "Janaina",
+            "idade": 18,
+            "genero": "Feminino"
+        }
+    ]
+}

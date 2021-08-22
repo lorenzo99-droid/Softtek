@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="col-md-12" [formGroup]="formFiltros">
+    <div class="row">
+      <div class="offset-4 col-md-6">
+        <label for="nome">Nome:</label>
+        <input type="text" class="form-control" id="nome" formControlName="nome">
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-4 col-md-6">
+        <label for="idade">Idade:</label>
+        <input type="number" class="form-control" id="idade" formControlName="idade">
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-4 col-md-6">
+        <label for="genero">Gênero:</label>
+        <select name="genero" class="form-control" id="genero" formControlName="genero">
+          <option value="{{genero}}" [disabled]="booleana" *ngFor="let genero of listaGenero">{{genero}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mt-5">
+  <div class="offset-9 col-md-1">
+    <button type="button" class="btn btn-primary" (click)="limpar()">Limpar</button>
+  </div>
+  <div class="col-md-1">
+    <button type="button" class="btn btn-primary" 
+      (click)="popularArray()">Inserir</button><!--[disabled]="!formFiltros.valid"-->
+  </div>
+</div>
+
+<button type="button" class="btn-primary" (click)="mandandoDadosParaHome()">Dados Home</button>
