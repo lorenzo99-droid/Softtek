@@ -9,7 +9,7 @@ import { environment } from "../../environments/environment";
 export class AgendaService {
 
   public atualizarGrid: BehaviorSubject<any> = new BehaviorSubject(false);
-
+  
   constructor(private http: HttpClient) { }
 
   getContatos(): Observable<ContatosResponse>

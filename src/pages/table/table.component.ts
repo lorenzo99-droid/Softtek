@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { Contato, ContatosResponse } from 'src/app/models/contatos-response';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { ModalComponent } from 'src/app/components-bootstrap/modal/modal.component';
+import { ContatosResponse } from 'src/app/models/contatos-response';
 import { AgendaService } from 'src/app/service/agenda.service';
 
 @Component({
@@ -9,26 +10,15 @@ import { AgendaService } from 'src/app/service/agenda.service';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-
-  [x: string]: any;
+  
   lista: any = [];
-  aparecerModal: boolean = false;
   
-  public modalRef!: BsModalRef;
-  
-  constructor(private agendaService: AgendaService,
-    private modalService: BsModalService) { }
+  constructor(private agendaService: AgendaService, public modalService: BsModalService) { }
   ngOnInit(): void 
   {
     this.chamandoAgendaService();
     this.behaviors();
   }
-
-  public openModal(template: TemplateRef<any>)
-  {
-    this.modalRef = this.modalService.show(template);
-  }
-
   chamandoAgendaService(): void
   {
     this.agendaService.getContatos().subscribe((data: ContatosResponse) =>
@@ -54,6 +44,7 @@ export class TableComponent implements OnInit {
 
   editar(id: number): void
   {
-
+    this.modalService.show(ModalComponent);    
   }
+  
 }

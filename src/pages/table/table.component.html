@@ -1,24 +1,23 @@
 <div class="col-md-12">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Nome:</th>
-                <th>Idade:</th>
-                <th>Gênero:</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let obj of lista">
-                <td>{{obj.nome}}</td>
-                <td>{{obj.idade}}</td>
-                <td>{{obj.genero}}</td>
-                <td><button type="button" class="btn btn-danger" (click)="excluir(obj.id)">Excluir</button></td>
-                <td><button type="button" class="btn btn-secondary" (click)="editar(obj.id)">Editar</button></td>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome:</th>
+        <th>Idade:</th>
+        <th>Gênero:</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let obj of lista">
+        <td>{{obj.nome}}</td>
+        <td>{{obj.idade}}</td>
+        <td>{{obj.genero}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="excluir(obj.id)">Excluir</button></td>
+        <td><button type="button" class="btn btn-secondary" (click)="editar(obj.id)">Editar</button></td>
 
-            </tr>
-        </tbody>
-    </table>
-    <!-- <button type="button" class="btn btn-primary">Inserir</button> -->
+      </tr>
+    </tbody>
+  </table> 
 </div>

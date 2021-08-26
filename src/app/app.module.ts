@@ -10,13 +10,15 @@ import { TableComponent } from '../pages/table/table.component';
 import { HomeComponent } from './home/home.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AgendaService } from './service/agenda.service';
+import { ModalComponent } from './components-bootstrap/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FiltroComponent,
     TableComponent,
-    HomeComponent
+    HomeComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import { AgendaService } from './service/agenda.service';
     HttpClientModule,
     ModalModule.forRoot()
   ],
-  exports:[ModalModule],
+  exports:[ModalModule, ],
   providers: [AgendaService],
   bootstrap: [AppComponent]
 })

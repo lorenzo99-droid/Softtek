@@ -68,5 +68,4 @@ export class  FiltroComponent implements OnInit {
   {
     this.mandandoDadosPraHome.emit(true)
   };
-
 }

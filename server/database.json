@@ -1,16 +1,34 @@
 {
   "contatos": [
     {
-      "nome": "Lorenzo Ferreira Martinez",
-      "idade": 30,
-      "genero": "Não-binário",
-      "id": 1
-    },
-    {
       "nome": "Maria Júlia",
       "idade": 35,
       "genero": "Feminino",
       "id": 2
+    },
+    {
+      "nome": "Vanessa",
+      "idade": 3,
+      "genero": "Feminino",
+      "id": 2
+    },
+    {
+      "nome": "Alex",
+      "idade": 29,
+      "genero": "Feminino",
+      "id": 2
+    },
+    {
+      "nome": "Lorenzo",
+      "idade": 23,
+      "genero": "Masculino",
+      "id": 3
+    },
+    {
+      "nome": "Luiz",
+      "idade": 30,
+      "genero": "Masculino",
+      "id": 4
     }
   ]
 }
