@@ -68,4 +68,14 @@ export class  FiltroComponent implements OnInit {
   {
     this.mandandoDadosPraHome.emit(true)
   };
+
+  filtrar(){
+    this.agendaService
+    .getContatosFilter(this.formFiltros.controls['nome'].value,
+                        this.formFiltros.controls['idade'].value,
+                        this.formFiltros.controls['genero'].value)
+    .subscribe((data)=>{
+      this.agendaService.guardandoDadosFiltrados.next(data);
+    })
+  }
 }
