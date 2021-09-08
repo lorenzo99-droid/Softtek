@@ -1,0 +1,36 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">Editar</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body" [formGroup]="formFiltros">
+  <div class="row">
+    <div class="col-md-12">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" class="form-control" formControlName="nome" />
+      <p *ngIf="!formFiltros.controls['nome'].valid" class="msgValidacao"> Por favor, digite o nome! </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <label for="preco">Preço:</label>
+      <input type="number" id="preco" class="form-control" formControlName="preco" />
+      <p *ngIf="!formFiltros.controls['preco'].valid" class="msgValidacao"> Por favor, digite a preço! </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <label for="quantidade">Quantidade:</label>
+      <input type="number" id="quantidade" class="form-control" formControlName="quantidade" />
+      <p *ngIf="!formFiltros.controls['quantidade'].valid" class="msgValidacao"> Por favor, digite a quantidade! </p>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="offset-10 col-md-2">
+      <button type="button" class="btn btn-success" [disabled]="!formFiltros.valid" (click)="editarInformacoes()">
+        Salvar
+      </button>
+    </div>
+  </div>
+</div>

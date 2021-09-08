@@ -1,0 +1,28 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "bolo de chocolate",
+      "preco": "8,99",
+      "quantidade": "2"
+    },
+    {
+      "id": 2,
+      "nome": "suco de uva",
+      "preco": "5,99",
+      "quantidade": "1"
+    },
+    {
+      "id": 3,
+      "nome": "antartica original",
+      "preco": "3,99",
+      "quantidade": "6"
+    },
+    {
+      "nome": "máscara",
+      "preco": 20,
+      "quantidade": 1,
+      "id": 4
+    }
+  ]
+}

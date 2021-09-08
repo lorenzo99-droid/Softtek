@@ -1,0 +1,25 @@
+<div class="col-md-12 container-fluid">
+    <div class="row">
+        <table class="table table-warning">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>preco</th>
+                    <th>Quantidade</th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let obj of lista">
+                    <td>{{obj.nome}}</td>
+                    <td>{{obj.preco}}</td>
+                    <td>{{obj.quantidade}}</td>
+                    <td><button type="button" class="btn btn-danger" (click)="excluir(obj.id)">Excluir</button></td>
+                    <td><button type="button" class="btn btn-secondary" (click)="editar(obj)">Editar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
